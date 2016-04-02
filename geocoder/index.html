@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>地址轉經緯度 - AsiaAnalytics Taiwan Ltd.</title>
+  <title>地址轉經緯度</title>
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVmZVLHGFXQDIyc_FBevQ219ioxOCIrr4"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVmZVLHGFXQDIyc_FBevQ219ioxOCIrr4"></script>
   <!-- Bootstrap -->
   <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
 
@@ -61,7 +61,7 @@
                 $('#resultTable').append(newRow);
               }
             });
-          }, index * 1000 + Math.random() * 500);
+          }, index * 1500 + Math.random() * 1000);
         });
 
       });
@@ -74,7 +74,14 @@
     <h1 class="text-center">地址轉經緯度</h1>
     <div class="container">
       <div class="row">
-        <textarea id="srcData" class="form-control" rows="15"></textarea>
+        <div class="col-md-6">
+          <h3 class="text-center">輸入資料</h3>
+          <textarea id="srcData" class="form-control" rows="15"></textarea>
+        </div>
+        <div class="col-md-6">
+          <h3 class="text-center">結果資料</h3>
+          <textarea id="resultCSV" class="form-control" rows="15"></textarea>
+        </div>
       </div>
       <div class="row">
         <div>
